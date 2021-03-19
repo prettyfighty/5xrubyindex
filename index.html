@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>五倍紅寶石．專業城市教育｜實戰轉職．企業內訓．人才媒合</title>
     <style>
         *{
             margin: 0;
@@ -16,8 +16,8 @@
             background-color: #f33;
         }
         .wrap{
-            width: 100%;
-            max-width: 1440px;
+            /* width: 100%; */
+            /* max-width: 1440px; */
         }
 
         /* <!-- header導覽列 -->*/
@@ -74,19 +74,26 @@
         }
 
         /* <!-- banner content --> */
+        .bn{
+
+        }
         .bn .container{
             position: relative;
+            display: flex;
             background: url(hcimg.jpg) no-repeat center top / cover;
             width: 100%;
-            max-width: 1440px;
+            /* max-width: 1440px; */
             height: 650px;
             margin-top: 65px;
+
         }
         .bn .info{
-            position: relative;
-            top: 85px;
-            left: 165px;
-            width: 70%;
+            /* position: absolute; */
+            margin: auto;
+            padding: 10px 40px;
+            box-sizing: border-box;
+            width: 80%;
+            height: 70%;
         }
         .bn h1{
             color: #fff;
@@ -327,15 +334,22 @@
         .cs{
             background-color: #2a2a3a;
             height: 1200px;
+            margin: auto;
         }
         .cs .short-cs{
             display: flex;
-            padding: 150px 100px 0 150px;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            padding: 150px 0 0 0;
         }
         .cs .guideline{
-            width: 46%;
+            /* outline: 1px solid #00f; */
+            width: 50%;
+            max-width: 520px;
             height: 400px;
             padding: 10px 10px;
+            box-sizing: border-box;
         }
         .cs .guideline h2{
             color: #fff;
@@ -359,17 +373,22 @@
             line-height: 1.5;
         }
         .cs .example-container{
-            width: 54%;
+            /* outline: 1px solid #ff0; */
+            /* width: 50%; */
+            margin: 30px;
             height: 400px;
             display: flex;
             align-items: center;
+            box-sizing: border-box;
         }
         .cs .example{
             background-color: rgb(255, 51, 68);
-            width: 75%;
+            width: 100%;
+            max-width: 520px;
             height: 220px;
             padding: 20px;
-            margin-left: 30px;
+            margin: 30px;
+            /* margin-left: 30px; */
             /* clip-path: polygon(28% 76%, 0 100%, 100% 100%); */
         }
         .cs .example h3{
@@ -400,25 +419,26 @@
         }
         .cs .recent-cs{
             padding: 0 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        .cs .recent-cs .container{
+            position: relative;
+            margin: auto;
         }
         .cs .recent-cs h3{
             color: #fff;
             font-size: 24px;
-            margin-bottom: 0.5em;
+            margin-bottom: 0.7em;
 
         }
-        .cs .recent-cs .container{
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        .cs .recent-cs .container a:not(:last-child){
+        .cs .recent-cs .container a{
             text-decoration: none;
-            display: block;
+            display: inline-block;
             border-radius: 10px;
             transition: transform .05s, box-shadow .05s;
         }
-        .cs .recent-cs .container a:hover:not(:last-child){
+        .cs .recent-cs .container a:hover .content{
             transform: translateY(-15px);
             box-shadow: 0 15px #f33;
         }
@@ -427,7 +447,7 @@
             border-radius: 10px;
             width: 375px;
             height: 350px;
-            margin: 10px 0px 0px 0px;
+            margin: 10px 15px 0px 15px;
         }
         .cs .recent-cs .content .pic{}
         .cs .recent-cs .content img{}
@@ -579,8 +599,8 @@
                 </div>
             </div>
             <div class="recent-cs">
-                <h3>近期課程</h3>
                 <div class="container">
+                    <h3>近期課程</h3>
                     <a href="#"><div class="content">
                         <div class="pic">
 
@@ -623,8 +643,8 @@
                             </div>
                         </div>
                     </div></a>
-                    <a href="#" class="more-cs">看更多課程</a>
                 </div>
+                <a href="#" class="more-cs">看更多課程</a>
             </div>
         </div>
 
