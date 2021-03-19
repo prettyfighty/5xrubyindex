@@ -66,7 +66,7 @@
             right: 50%;
             bottom: -14px;
             border-bottom: 3px solid #f00;
-            transition: .3s;
+            transition: .18s;
         }
         .nav a:hover::after{
             left: 10%;
@@ -80,10 +80,10 @@
         .bn .container{
             position: relative;
             display: flex;
-            background: url(hcimg.jpg) no-repeat center top / cover;
+            background: url(hcimg02.jpg) no-repeat center top / cover;
             width: 100%;
             /* max-width: 1440px; */
-            height: 650px;
+            height: 600px;
             margin-top: 65px;
 
         }
@@ -110,7 +110,7 @@
         .bn a{
             display: inline-block;
             text-decoration: none;
-            background-color: #f33;
+            background-color: #ff3338;
             color: #fff;
             font-size: 16px;
             padding: 17px 35px;
@@ -121,13 +121,16 @@
             transition: .3s;
         }
         .bn a:hover{
-            background-color: #c11;
+            background-color: #b11;
         }
 
         /* <!-- feature content --> */
         .fc{
             display: flex;
             flex-wrap: wrap;
+            justify-content:center;
+            align-content: center;
+            padding-bottom: 200px;
         }
         /* .fc .title::before{
             content: '';
@@ -169,17 +172,18 @@
         .fc .container{
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1440px;
+
         }
         .fc .content{
-            display: flex;
-            flex-direction: column;
             box-sizing: border-box;
-            width: 26.5%;
+            width: 355px;
             margin: 25px;
         }
         .fc .content .pic{
-            padding: 27px 60px 18px 60px;
+            padding: 30px 65px;
         }
         .fc img{
             width: 100%;
@@ -202,8 +206,10 @@
         .tc{
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             background: #fafafa;
             /* background-color: #aaa; */
+            padding: 0 0 150px 0;
         }
         .tc .title-container{
             margin: auto;
@@ -215,8 +221,9 @@
             align-items: flex-start;
             margin: auto;
             box-sizing: border-box;
-            width: 65%;
-            padding: 20px 10px 20px 20px;
+            width: 75%;
+            min-width: 680px;
+            padding: 20px;
             text-align: justify;
         }
         .tc .title h2{
@@ -249,6 +256,8 @@
             display: flex;
             background-color: #fff;
             width: 55%;
+            min-width: 650px;
+            max-width: 1440px;
             box-shadow: 0px 3px 15px rgba(0, 0, 0, .1);
         }
         .tc .content .pic{
@@ -259,7 +268,7 @@
             align-items: center;
         }
         .tc .content .pic img{
-            width: 100%;
+            width: 200px;
             padding: 30px 0;
             border-radius: 50%;
             vertical-align: top;
@@ -335,21 +344,26 @@
             background-color: #2a2a3a;
             height: 1200px;
             margin: auto;
+            padding: 50px 0 0 0;
         }
         .cs .short-cs{
             display: flex;
             justify-content: center;
             align-items: center;
             margin: auto;
-            padding: 150px 0 0 0;
+            /* padding: 150px auto 0 auto; */
         }
         .cs .guideline{
             /* outline: 1px solid #00f; */
-            width: 50%;
-            max-width: 520px;
-            height: 400px;
+            /* width: 50%; */
+            min-width: 360px;
+            max-width: 600px;
+            /* height: 400px; */
+            align-self: flex-start;
             padding: 10px 10px;
             box-sizing: border-box;
+            margin-top: 30px;
+            margin-left: 150px;
         }
         .cs .guideline h2{
             color: #fff;
@@ -373,18 +387,22 @@
             line-height: 1.5;
         }
         .cs .example-container{
-            /* outline: 1px solid #ff0; */
+            flex-grow: 1;
+            max-width: 600px;
             /* width: 50%; */
             margin: 30px;
             height: 400px;
             display: flex;
             align-items: center;
+            /* padding-right: 30px; */
             box-sizing: border-box;
+            margin-right: 150px;
         }
         .cs .example{
             background-color: rgb(255, 51, 68);
             width: 100%;
-            max-width: 520px;
+            min-width: 360px;
+            max-width: 600px;
             height: 220px;
             padding: 20px;
             margin: 30px;
@@ -423,31 +441,41 @@
             flex-direction: column;
         }
         .cs .recent-cs .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             position: relative;
+            width: 100%;
+            max-width: 1400px;
             margin: auto;
         }
         .cs .recent-cs h3{
+            width: 100%;
             color: #fff;
             font-size: 24px;
             margin-bottom: 0.7em;
 
         }
-        .cs .recent-cs .container a{
-            text-decoration: none;
-            display: inline-block;
+        .cs .recent-cs .container .content{
             border-radius: 10px;
             transition: transform .05s, box-shadow .05s;
         }
-        .cs .recent-cs .container a:hover .content{
+        .cs .recent-cs .content a{
+            text-decoration: none;
+
+        }
+        .cs .recent-cs .container .content:hover{
             transform: translateY(-15px);
             box-shadow: 0 15px #f33;
         }
         .cs .recent-cs .content{
-            background-color: #aff;
+            background-color: #fafafa;
             border-radius: 10px;
-            width: 375px;
+            width: 30%;
+            min-width: 275px;
+            max-width: 430px;
             height: 350px;
-            margin: 10px 15px 0px 15px;
+            margin: 10px 10px 0px;
         }
         .cs .recent-cs .content .pic{}
         .cs .recent-cs .content img{}
@@ -456,7 +484,7 @@
             display: inline-block;
             align-self: center;
             text-decoration: none;
-            background-color: #f33;
+            background-color: #f34;
             color: #fff;
             font-size: 18px;
             padding: 15px 32px;
@@ -467,7 +495,7 @@
             transition: .3s;
         }
         .cs .recent-cs .more-cs:hover{
-            background-color: #c11;
+            background-color: #b11;
         }
 
     </style>
@@ -601,7 +629,7 @@
             <div class="recent-cs">
                 <div class="container">
                     <h3>近期課程</h3>
-                    <a href="#"><div class="content">
+                    <div class="content"><a href="#">
                         <div class="pic">
 
                         </div>
@@ -614,8 +642,8 @@
                                 <span>入門課程</span>
                             </div>
                         </div>
-                    </div></a>
-                    <a href="#"><div class="content">
+                    </a></div>
+                    <div class="content"><a href="#">
                         <div class="pic">
 
                         </div>
@@ -628,8 +656,8 @@
                                 <span>入門課程</span>
                             </div>
                         </div>
-                    </div></a>
-                    <a href="#"><div class="content">
+                    </a></div>
+                    <div class="content"><a href="#">
                         <div class="pic">
 
                         </div>
@@ -642,7 +670,7 @@
                                 <span>入門課程</span>
                             </div>
                         </div>
-                    </div></a>
+                    </a></div>
                 </div>
                 <a href="#" class="more-cs">看更多課程</a>
             </div>
