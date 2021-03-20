@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五倍紅寶石．專業城市教育｜實戰轉職．企業內訓．人才媒合</title>
+    <style>
+        @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        *::selection {
+            color: #fff;
+            background-color: #f33;
+        }
+        body{
+            font-family: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
+        }
+        /* .wrap{
+            width: 100%;
+            max-width: 1440px;
+        } */
+
+        /* <!-- header導覽列 -->*/
+        .header {
+            width: 100%;
+            background-color: #fff;
+            height: 65px;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 5px 15px rgba(100, 100, 100, .1);
+        }
+        .logo a {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
+            font-size: 18px;
+            padding: 20px;
+            transition: .3s;
+        }
+        .logo a img {
+            position: relative;
+            top: 4px;
+        }
+        .logo a:hover {
+            color: #f00;
+        }
+        .nav {
+            margin: 10px 25px;
+            font-size: 0;
+        }
+        .nav a {
+            display: inline-block;
+            font-size: 18px;
+            text-decoration: none;
+            color: #000;
+            padding: 10px 15px;
+            transition: .3s;
+            position: relative;
+        }
+        .nav a:hover {
+            color: #f00;
+        }
+        .nav a::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: -14px;
+            border-bottom: 3px solid #f00;
+            transition: .18s;
+        }
+        .nav a:hover::after {
+            left: 10%;
+            right: 10%;
+        }
+
+        /* <!-- banner content --> */
+        .bn .container {
+            position: relative;
+            display: flex;
+            /* background-color: rgba(42, 42, 58, .2); */
+            background:
+                linear-gradient(to bottom, rgba(42, 42, 58, .85) 0%, rgba(42, 42, 58, .85) 100%) no-repeat center bottom / cover,
+                /* linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,.15) 33%, rgba(255,255,255,0) 50%) no-repeat center bottom / cover, */
+                url(bnimg02.jpg) no-repeat center top / cover;
+            width: 100%;
+            /* max-width: 1440px; */
+            height: 600px;
+            margin-top: 65px;
+        }
+        .bn .container img {
+            width: 100%;
+            z-index: -1;
+        }
+        .bn .info {
+            /* position: absolute; */
+            margin: auto;
+            padding: 10px 40px;
+            box-sizing: border-box;
+            width: 80%;
+            min-width: 860px;
+            max-width: 1100px;
+            height: 70%;
+        }
+        .bn h1 {
+            color: #fff;
+            font-size: 60px;
+            font-weight: 900;
+            padding: 20px;
+        }
+        .bn p {
+            color: #fff;
+            display: block;
+            padding-left: 20px;
+            font-size: 20px;
+        }
+        .bn a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #ff3338;
+            color: #fff;
+            font-size: 16px;
+            padding: 17px 35px;
+            position: relative;
+            top: 50px;
+            left: 22px;
+            border-radius: 5%;
+            transition: .3s;
+        }
+        .bn a:hover {
+            background-color: #b11;
+        }
+
+        /* <!-- feature content --> */
+        .fc {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            padding-bottom: 170px;
+        }
+        /* .fc .title::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: 10em solid #00f;
+            border-left: 30em solid #ff0;
+            border-right: 50em solid #ff0;
+            transform: translateY(-100%);
+        } */
+        .fc .title {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 40px 40px 10px 40px;
+            text-align: center;
+        }
+        .fc .title h2 {
+            font-size: 30px;
+            padding-bottom: 1em;
+            color: #444;
+            position: relative;
+        }
+        .fc .title h2::after {
+            content: '';
+            position: absolute;
+            left: 48%;
+            right: 48%;
+            bottom: 20px;
+            border-bottom: 2px solid #f00;
+        }
+        .fc .title p {
+            font-size: 20px;
+            color: #444;
+        }
+        .fc .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1440px;
+        }
+        .fc .content {
+            box-sizing: border-box;
+            width: 355px;
+            margin: 25px;
+        }
+        .fc .content .pic {
+            padding: 30px 65px;
+        }
+        .fc img {
+            width: 100%;
+            vertical-align: middle;
+        }
+        .fc .content .txt {
+            text-align: center;
+            color: #444;
+        }
+        .fc .content h3 {
+            font-size: 18px;
+            margin: 0 10px 10px;
+        }
+        .fc .content p {
+            font-size: 16px;
+            line-height: 1.5em;
+        }
+
+        /* <!-- teachers --> */
+        .tc {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #fafafa;
+            /* background-color: #aaa; */
+            padding: 0 0 50px 0;
+        }
+        .tc .title-container {
+            margin: auto;
+            padding: 40px;
+        }
+        .tc .title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: auto;
+            box-sizing: border-box;
+            width: 75%;
+            min-width: 680px;
+            padding: 20px;
+            text-align: justify;
+        }
+        .tc .title h2 {
+            font-size: 30px;
+            padding-bottom: .8em;
+            color: #444;
+            position: relative;
+        }
+        .tc .title h2::after {
+            content: '';
+            position: absolute;
+            left: 0%;
+            right: 60%;
+            bottom: 20px;
+            border-bottom: 2px solid #f00;
+        }
+        .tc .title p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #444;
+        }
+        .tc .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 700px;
+            background: #fafafa;
+        }
+        .tc .container .pic-a {
+            font-size: 0;
+        }
+        .tc .container .pic-a a {
+            display: inline-block;
+            font-size: 22px;
+            margin: 0 6px;
+            padding: 0 5px;
+            color: rgba(0, 0, 0, .5);
+            transition: .1s;
+        }
+        .tc .container .pic-a a:last-child {
+            margin: 2px;
+        }
+        .tc .container .pic-a a:hover {
+            color: rgba(0, 0, 0, .8);
+        }
+        .tc .content {
+            display: flex;
+            background-color: #fff;
+            width: 55%;
+            min-width: 650px;
+            max-width: 1440px;
+            box-shadow: 0px 3px 15px rgba(0, 0, 0, .1);
+        }
+        .tc .content .pic {
+            width: 35%;
+            padding: 0 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .tc .content .pic img {
+            width: 200px;
+            padding: 30px 0 15px 0;
+            border-radius: 50%;
+            vertical-align: top;
+        }
+        .tc .content .pic-a a {
+            text-decoration: none;
+            display: inline-block;
+        }
+        .tc .content .txt {
+            width: 65%;
+            padding: 40px 20px 40px 0;
+            text-align: justify;
+            color: #444;
+        }
+        .tc .content .txt h5 {
+            font-size: 16px;
+            font-weight: normal;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+            position: relative;
+        }
+        .tc .content h5::after {
+            content: '';
+            position: absolute;
+            left: 0%;
+            right: 91%;
+            bottom: 0px;
+            border-bottom: 2px solid #f00;
+        }
+        .tc .content .txt h3 {
+            font-size: 20px;
+            font-weight: 700;
+            padding-bottom: 0.5em;
+            margin-bottom: 0.5em;
+        }
+        .tc .content .txt article {
+            line-height: 1.5;
+        }
+        .tc .content .txt p {
+            margin-bottom: 0.5em;
+        }
+        .tc .other-title {
+            margin-top: 10px;
+        }
+        .tc .other-title p {
+            position: relative;
+        }
+        .tc .other-title p::after {
+            content: '';
+            position: absolute;
+            left: 23%;
+            right: 0;
+            bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .tc .other-products a {
+            display: inline-block;
+            text-decoration: none;
+            color: #f33;
+            padding: 5px 10px;
+            margin: 5px;
+            border: 1px solid #f33;
+            border-radius: 5px;
+            transition: .1s;
+        }
+        .tc .other-products a:hover {
+            background-color: #f33;
+            color: #fff;
+        }
+
+        /* <!-- courses --> */
+        .cs {
+            background-color: #2a2a3a;
+            height: 1200px;
+            margin: auto;
+            padding: 150px 0 0 0;
+        }
+        .cs .short-cs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            /* padding: 150px auto 0 auto; */
+        }
+        .cs .guideline {
+            /* width: 50%; */
+            min-width: 360px;
+            max-width: 600px;
+            /* height: 400px; */
+            align-self: flex-start;
+            padding: 10px 10px;
+            box-sizing: border-box;
+            margin-top: 30px;
+            margin-left: 150px;
+        }
+        .cs .guideline h2 {
+            color: #fff;
+            font-size: 30px;
+            padding-bottom: 0.5em;
+            margin-bottom: 0.5em;
+            position: relative;
+        }
+        .cs .guideline h2::after {
+            content: '';
+            position: absolute;
+            left: 0%;
+            right: 90%;
+            bottom: 5px;
+            border-bottom: 2px solid #f00;
+        }
+        .cs .guideline p {
+            color: rgba(160, 166, 177, 1);
+            font-size: 20px;
+            margin-bottom: 0.5em;
+            line-height: 1.5;
+        }
+        .cs .example-container {
+            flex-grow: 1;
+            max-width: 600px;
+            /* width: 50%; */
+            margin: 30px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            /* padding-right: 30px; */
+            box-sizing: border-box;
+            margin-right: 150px;
+        }
+        .cs .example {
+            background-color: rgb(255, 51, 68);
+            width: 100%;
+            min-width: 360px;
+            max-width: 600px;
+            height: 220px;
+            padding: 20px;
+            margin: 30px;
+            /* margin-left: 30px; */
+            /* clip-path: polygon(28% 76%, 0 100%, 100% 100%); */
+        }
+        .cs .example h3 {
+            color: #fff;
+            font-size: 28px;
+            margin-top: 0.65em;
+            padding-bottom: 0.5em;
+            margin-bottom: 0.5em;
+        }
+        .cs .example p {
+            color: #fff;
+        }
+        .cs .example a {
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+        }
+        .cs .example a:hover {
+            text-decoration: underline;
+        }
+        .cs .example a .fa-chevron-right {
+            transform: translateX(10px);
+        }
+        .cs .example a:hover .fa-chevron-right {
+            transform: translateX(15px);
+        }
+        .cs .recent-cs {
+            padding: 0 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        .cs .recent-cs .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        .cs .recent-cs h3 {
+            width: 100%;
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 0.7em;
+        }
+        .cs .recent-cs .content a {
+            text-decoration: none;
+        }
+        .cs .recent-cs .container .content:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px #f33;
+        }
+        .cs .recent-cs .content {
+            background-color: #fafafa;
+            border-radius: 10px;
+            width: 30%;
+            min-width: 310px;
+            max-width: 410px;
+            height: 365px;
+            margin: 10px 10px 0px;
+            transition: transform .05s, box-shadow .05s;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: space-between; */
+        }
+        .cs .recent-cs .content img {
+            width: 100%;
+            vertical-align: middle;
+            border-radius: 10px 10px 0 0;
+        }
+        .cs .recent-cs .content .txt {
+            box-sizing: border-box;
+            padding: 10px;
+
+        }
+        .cs .recent-cs .classno {
+            padding-bottom: 0.25em;
+        }
+        .cs .recent-cs .classno span {
+            display: inline-block;
+            color: #6c727f;
+            border: 1px solid #d3d6db;
+            border-radius: 5px;
+            font-size: 14px;
+            padding: 0.25em;
+            margin: 0.15em;
+        }
+        .cs .recent-cs .classtc {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            border-top: 1px solid #d3d6db;
+            padding-top: 5px;
+            width: 95%;
+        }
+        .cs .recent-cs .classtc .tcname {
+            margin-right: auto;
+            color: #a0a6b1;
+            font-size: 18px;
+        }
+        .cs .recent-cs .classtc span {
+            font-size: 14px;
+            color: #f87171;
+            align-self: center;
+        }
+        .cs .recent-cs .content:last-child .classtc span {
+            color: #34d399;
+        }
+        .cs .recent-cs .more-cs {
+            display: inline-block;
+            align-self: center;
+            text-decoration: none;
+            background-color: #f34;
+            color: #fff;
+            font-size: 18px;
+            padding: 15px 32px;
+            position: relative;
+            top: 40px;
+            margin: auto;
+            border-radius: 5%;
+            transition: .3s;
+        }
+        .cs .recent-cs .more-cs:hover {
+            background-color: #b11;
+        }
+
+        /* <!-- learning paths --> */
+        .lp {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #fafafa;
+            padding: 0 0 150px 0;
+        }
+        .lp .title-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            width: 95%;
+            max-width: 1360px;
+            min-width: 900px;
+        }
+        .lp .title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            box-sizing: border-box;
+            width: 70%;
+            min-width: 680px;
+            padding: 30px 30px 20px 0px;
+            text-align: justify;
+        }
+        .lp .title h2 {
+            font-size: 30px;
+            padding-bottom: 1em;
+            color: #444;
+            position: relative;
+            max-width: 928px;
+        }
+        .lp .title h2::after {
+            content: '';
+            position: absolute;
+            left: 0%;
+            right: 82%;
+            bottom: 20px;
+            border-bottom: 2px solid #f00;
+        }
+        .lp .title p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #444;
+        }
+        .lp .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        .lp .content .info h3 {
+            width: 100%;
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 0.7em;
+
+        }
+        .lp .content {
+            background-color: #fafafa;
+            border-radius: 10px;
+            box-shadow: 0px 3px 15px rgba(50, 50, 50, .1);
+            width: 30%;
+            padding-bottom: 1em;
+            min-width: 310px;
+            max-width: 430px;
+            min-height: 355px;
+            margin: 10px 10px 0px;
+            transition: transform .05s, box-shadow .05s;
+        }
+        .lp .content a {
+            text-decoration: none;
+        }
+        .lp .content:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px #f33;
+        }
+        .lp .content .pic{           
+            height: 180px;            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .lp .content .pic1{
+            background: 
+                linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,.15) 45%, rgba(255,255,255,0) 100%) no-repeat center bottom / cover,
+                url(lpimg01.jpg) no-repeat center 35% / cover;
+        }
+        .lp .content .pic2{
+            background: 
+                linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,.15) 60%, rgba(255,255,255,0) 100%) no-repeat center bottom / cover,
+                url(lpimg02-2.jpg) no-repeat center 10% / cover;
+        }
+        .lp .content .pic3{
+            background: 
+                /* linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,.15) 50%, rgba(255,255,255,0) 100%) no-repeat center bottom / cover, */
+                url(lpimg03.jpg) no-repeat center 90% / cover;
+        }
+        .lp .content .pic h3 {
+            font-weight: 700;
+            font-size: 30px;
+            text-align: center;
+        }
+        .lp .content .txt {
+            box-sizing: border-box;
+            padding: 10px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        .lp .content .txt h4 {
+            font-size: 20px;
+            color: #444;
+            margin: 5px 10px;
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #d3d6db;
+        }
+        .lp .content .txt p {
+            color: #444;
+            margin: 10px;
+            line-height: 1.5;
+        }
+        .lp .content span {
+            display: block;
+            margin-top: auto;
+            margin-left: .5em;
+            color: #f33;
+        }
+        .lp .content span:hover{
+            text-decoration: underline;
+        }
+        .lp .content span .fa-chevron-right {
+            transform: translateX(5px);
+        }
+        .lp .content span:hover .fa-chevron-right {
+            transform: translateX(10px);
+        }
+        
+        /* <!-- messages --> */
+
+        .ms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            padding: 145px 0;
+        }
+        .ms .title {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 40px 40px 25px 40px;
+            text-align: center;
+        }
+        .ms .title h2 {
+            font-size: 30px;
+            padding-bottom: 1em;
+            color: #444;
+            position: relative;
+        }
+        .ms .title h2::after {
+            content: '';
+            position: absolute;
+            left: 48.7%;
+            right: 48.7%;
+            bottom: 20px;
+            border-bottom: 2px solid #f00;
+        }
+        .ms .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1440px;
+        }
+        .ms .content {
+            box-sizing: border-box;
+            box-shadow: 0px 3px 15px rgba(0, 0, 0, .1);
+            width: 23%;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+        }
+        .ms .content .txt {
+            padding: .3em;
+        }
+        .ms .content p {
+            color: #394150;
+            font-size: 16px;
+            line-height: 1.5em;
+            text-align: justify;
+            padding-bottom: 1em;
+        }
+        .ms .content .pic {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            margin-top: 0;
+        }
+        .ms img {
+            height: 100%;
+            border-radius: 100%;
+            vertical-align: middle;
+        }
+        .ms .content span{
+            font-size: 14px;
+            display: block;
+            margin-left: .7em;
+            color: #a0a6b1;
+        }
+
+        /* <!-- footer --> */
+        .footer{
+            background-color: #2a2a3a;
+            box-sizing: border-box;
+            padding: 100px 0 0 0;
+            height: 650px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-container{
+            width: 80%;
+            min-width: 1050px;
+            display: flex;
+            justify-content: center;
+        }
+        .footer .cpinfo{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            min-width: 350px;
+            max-width: 550px;
+            margin-left: 1em;
+            margin-bottom: auto;
+            padding-top: 2em;
+        }
+        .footer .cpinfo img{
+            width: 209px;
+            margin: 1em 0;
+        }
+        .footer .cpinfo a,
+        .footer .content a{
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            margin: .3em 0;
+            font-size: 14px;
+        }
+        .footer .cpinfo a:hover,
+        .footer .content a:hover{
+            color: #f33;
+        }
+        .footer .container{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            width: 60%;
+            min-width: 600px;
+            padding-bottom: 3em;
+        }
+        .footer .content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            box-sizing: border-box;
+            padding: 0 2em;
+            width: 30%;
+            max-width: 300px;
+            margin: 1.5em 0;
+        }
+        .footer .content h5{
+            margin: 1em 0;
+            font-size: 16px;
+            color: #fff;
+        }
+        .footer .link{
+            font-size: 0;
+        }
+        .footer .link a{
+            display: inline-block;
+            text-decoration: none;
+            font-size: 32px;
+            color: #6e7886;
+            margin: 0 .8em;
+            padding-bottom: 2.6em;
+        }
+        .footer .link a:hover{
+            color: #c8d2dc;
+        }
+        .copyright{
+            width: 100%;
+            padding: 1em 0;
+            text-align: center;
+            color: #a0a6b1;
+            background-color: #181e2d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <!-- header導覽列 -->
+        <div class="header">
+            <div class="logo">
+                <a href="#"><img src="rubyicon.jpg">五倍紅寶石．專業程式教育機構</a>
+            </div>
+            <div class="nav">
+                <a href="#">全方位培訓營</a>
+                <a href="#">ASTRO Camp</a>
+                <a href="#">線上課程</a>
+                <a href="#">短期課程</a>
+                <a href="#">專欄文章</a>
+                <a href="#">最新消息</a>
+            </div>
+        </div>
+
+        <!-- banner content -->
+        <div class="bn">
+            <div class="container">
+                <!-- <img src="hcimg02.jpg" alt=""> -->
+                <div class="info">
+                    <h1>五倍學習，突破你的可能性</h1>
+                    <p>掌握實戰經驗，從初心素人到業界接軌，讓專業師資為你重新定義程式教育。</p>
+                    <a href="#">立即選課</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- feature content -->
+        <div class="fc">
+            <div class="title">
+                <h2>不只停留在教你釣魚，更引領你乘風破浪</h2>
+                <p>我們不藏私的教學，讓所有人都能發揮超越五倍的價值。</p>
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="pic">
+                        <img src="https://60503225c3ba680007f5a110--5xtraining.netlify.app/_next/static/images/learning-145b2bca330596c38a73e92e35c8e42d.png">
+                    </div>
+                    <div class="txt">
+                        <h3>鍛鍊實力，主導學習</h3>
+                        <p>搭配最新技術版本，掌握業界脈動，</p>
+                        <p>與需求緊密結合，鍛鍊程式實力。</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="pic">
+                        <img src="https://60503225c3ba680007f5a110--5xtraining.netlify.app/_next/static/images/plan-ad32f52a511fde40f36d5e55302554f4.png">
+                    </div>
+                    <div class="txt">
+                        <h3>完整規劃，絕不漏接</h3>
+                        <p>線上補課、線下討論與社群活動，</p>
+                        <p>確保學員擁有充份且多元的學習資源和支持系統。</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="pic">
+                        <img src="https://60503225c3ba680007f5a110--5xtraining.netlify.app/_next/static/images/challenge-4ead379b6828fce2e2b000cb65c89615.png">
+                    </div>
+                    <div class="txt">
+                        <h3>挑戰困境，突破職涯</h3>
+                        <p>無論新手塊領域轉職，或在職工程師深度進修，</p>
+                        <p>讓五倍為你解構學習，突破困境。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- teachers -->
+        <div class="tc">
+            <div class="title-container">
+                <div class="title">
+                    <h2>講師陣容</h2>
+                    <p>我們的講師長期專注於網站開發技術領域，透過研討會、社群演講及授課方式將技術知識分享給更多人知道，讓更多人了解各個技術的美好之處。</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="pic">
+                        <img src="tcpic01.jpg" alt="">
+                        <div class="pic-a">
+                            <a href="https://www.facebook.com/ShinHaeSun0831.TW"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/shinhs831/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://zh.wikipedia.org/wiki/%E7%94%B3%E6%83%A0%E5%96%84"><i class="fa fa-wikipedia-w" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="txt">
+                        <h5>韓國女演員</h5>
+                        <h3>申惠善 (신혜선)</h3>
+                        <article>
+                            <p>韓國女演員。2012年12月，申惠善在KBS月火劇《學校2013》實名飾演學生並正式以演員身份出道。</p>
+                            <p>2017年9月，在KBS週末劇<strong>《我的黃金光輝人生》</strong>，首次擔任女主角[2]，該劇播出後收視率一路走高，成為KBS電視台2017年電視劇收視冠軍，並創下47.5的收視紀錄，人氣急升。</p>
+                            <p>後續主演<storng>《雖然30但仍17》</storng>、<strong>《死之詠贊》</strong>、《僅此一次的愛情》等電視劇，分別飾演小提琴家、聲樂家、芭蕾舞者等角色，而有「御用藝術家」、「值得信任的演員」、「名品演技」之稱。</p>
+                            <p>2020年12月憑<strong>《哲仁王后》</strong>中飾演金昭容一角，再次攀上事業高峰。 </p>
+                            <br>
+                            <div class="other-title">
+                                <p>其他影視作品</p>
+                            </div>
+                            <div class="other-products">
+                                <a href="#">翻供</a>
+                                <a href="#">秘密森林</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- courses -->
+        <div class="cs">
+            <div class="short-cs">
+                <div class="guideline">
+                    <h2>短期實體課程</h2>
+                    <p>目標清晰的短期課程，針對單一技術所開設。適合在職進修的工程師、PM，或對網頁設計有興趣的你。</p>
+                </div>
+                <div class="example-container">
+                    <div class="example">
+                        <h3>後端課程</h3>
+                        <p>專屬五倍的後端課程 Ruby on Rails，一起踏入後端領域吧！</p>
+                        <br>
+                        <br>
+                        <a href="#">前往課程<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="recent-cs">
+                <div class="container">
+                    <h3>近期課程</h3>
+                    <div class="content"><a href="#">
+                            <div class="pic">
+                                <img src="recspic01-2.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <div class="classno">
+                                    <span>《哲仁王后》</span>
+                                    <span>歷史</span>
+                                    <span>愛情</span>
+                                    <span>喜劇</span>
+                                </div>
+                                <div class="classtc">
+                                    <div class="tcname"><i class="fa fa-user" aria-hidden="true"></i> 主演：金昭容 (中殿娘娘)</div>
+                                    <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 非看不可</span>
+                                </div>
+                            </div>
+                        </a></div>
+                    <div class="content"><a href="#">
+                            <div class="pic">
+                                <img src="recspic02.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <div class="classno">
+                                    <span>《我的黃金光輝人生》</span>
+                                    <span>人生</span>
+                                    <span>寫實</span>
+                                    <span>愛情</span>
+                                </div>
+                                <div class="classtc">
+                                    <div class="tcname"><i class="fa fa-user" aria-hidden="true"></i> 主演：徐智安</div>
+                                    <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 超級推薦</span>
+                                </div>
+                            </div>
+                        </a></div>
+                    <div class="content"><a href="#">
+                            <div class="pic">
+                                <img src="recspic03.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <div class="classno">
+                                    <span>《雖然30但仍17》</span>
+                                    <span>愛情</span>
+                                    <span>喜劇</span>
+                                </div>
+                                <div class="classtc">
+                                    <div class="tcname"><i class="fa fa-user" aria-hidden="true"></i> 主演：禹書莉</div>
+                                    <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 還算不錯</span>
+                                </div>
+                            </div>
+                        </a></div>
+                </div>
+                <a href="#" class="more-cs">看更多課程</a>
+            </div>
+        </div>
+
+        <!-- learning paths -->
+        <div class="lp">
+            <div class="title-container">
+                <div class="title">
+                    <h2>掌握自己的學習路徑</h2>
+                    <p>針對不同需求的學員，五倍規劃了多元且完整的學習路徑：從前端到後端，全方面的包套課程，與彈性的線上課程、假日班，任您自由選擇。</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="content"><a href="#">
+                        <div class="pic pic1">
+                            <div class="info">
+                                <h3>I'm coding it!
+                                    <br>
+                                    微痛轉職工程師
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="txt">
+                            <h4>線上課程</h4>
+                            <p>不限時間、地點，自己掌握學習進度。課程內容包含前後端課程，附加完課即提供免費履歷健檢服務。適合在職、喜歡自己掌握進度的人。</p>
+                            <span>前往課程<i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                        </div>
+                    </a></div>
+                <div class="content"><a href="#">
+                        <div class="pic pic2">
+                            <div class="info">
+                                <h3>全方位
+                                    <br>
+                                    網頁設計前後實戰
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="txt">
+                            <h4>全方位培訓營</h4>
+                            <p>課程包含 Git / HTML / JavaScript / Ruby on Rails 適合在職或希望利用假日上課的人。</p>
+                            <span>前往課程<i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                        </div>
+                    </a></div>
+                <div class="content"><a href="#">
+                        <div class="pic pic3">
+                            <div class="info">
+                                <h3>ASTRO Camp
+                                    <br>
+                                    全端工程師實戰訓練營
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="txt">
+                            <h4>三個月實戰轉職全端工程師</h4>
+                            <p>除了提供前端到後端課程外，課程期間還包含履歷健檢、模擬面試、專題製作、企業交流等服務。適合有時間決心轉職工程師的素人。</p>
+                            <span>前往課程<i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                        </div>
+                    </a></div>
+            </div>
+        </div>
+
+        <!-- messages -->
+        <div class="ms">
+            <div class="title">
+                <h2>在五倍，我們一起超越五倍</h2>
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="txt">
+                        <p>此劇講述生活在自由的現代大韓民國的男人－青瓦台的廚師張奉煥的靈魂穿越到朝鮮王朝時代王宮內哲宗的王妃金昭容體內後所展開的故事。台灣由friDay影音12月13日起每週日一早上10點獨家上線。</p>
+                    </div>
+                    <div class="pic">
+                        <img src="mspic.jpg" alt="">
+                        <span>哲仁王后</span>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="txt">
+                        <p>此劇講述陰錯陽差成為富人的女人徐知安，跌入人生低谷時，從中領悟幸福的故事。主要探討由父母的社會階級（如：能力、財富、背景）來決定子女的階級，來回答現今社會中陷入疑惑的人們「幸福是什麼？」，來作為基本概念，是一部探討人生、人性的電視劇。以女主角的視角出發，檢視在人生起伏震盪的過程中，對親情、愛情、事業與幸福的定義。</p>
+                    </div>
+                    <div class="pic">
+                        <img src="mspic.jpg" alt="">
+                        <span>我的黃金光輝人生</span>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="txt">
+                        <p>此劇講述年齡和肉體30歲、但是精神還停留在17歲的禹書莉，與誤以為自己害死了禹書莉的封閉孔宇振，兩人相遇後發生的療癒故事。</p>
+                    </div>
+                    <div class="pic">
+                        <img src="mspic.jpg" alt="">
+                        <span>雖然30但仍17</span>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="txt">
+                        <p>此劇講述朝鮮最早的公費留學生尹心悳和她的戀人、天才劇作家金佑鎭在玄海灘殉情的故事。</p>
+                    </div>
+                    <div class="pic">
+                        <img src="mspic.jpg" alt="">
+                        <span>死之詠贊</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="footer-container">
+                <div class="cpinfo">
+                    <img src="cpinfopic.svg" alt="">
+                    <a href="tel:886223315247" target="_blank">電話 | (02) 2331-5247</a>
+                    <a href="mailto:course@5xcampus.com" target="_blank">信箱 | course@5xcampus.com</a>
+                    <a href="https://g.page/5xruby" target="_blank">地址 | 10046 台北市中正區衡陽路 7 號 5 樓</a>
+                </div>
+                <div class="container">
+                    <div class="content">
+                        <h5>專業課程</h5>
+                        <a href="#">全方位培訓營</a>
+                        <a href="#">ASTRO Camp</a>
+                        <a href="#">線上課程</a>
+                        <a href="#">短期課程</a>
+                    </div>
+                    <div class="content">
+                        <h5>關於我們</h5>
+                        <a href="#">關於五倍紅寶石</a>
+                        <a href="#">聯絡我們</a>
+                    </div>
+                    <div class="content">
+                        <h5>部落格</h5>
+                        <a href="#">專欄文章</a>
+                        <a href="#">最新消息</a>
+                    </div>
+                    <div class="content">
+                        <h5>幫助與政策</h5>
+                        <a href="#">常見問題</a>
+                        <a href="#">隱私權政策</a>
+                        <a href="#">服務條款</a>
+                    </div>
+                </div>
+            </div>
+            <div class="link">
+                <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-medium" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <!-- copyright -->
+        <div class="copyright">
+            &copy; 2014 - 2021 五倍紅寶石程式資訊教育股份有限公司 (5xRuby Training Group CO., LTD) | 台北市短期補習班立案 第 7594 號
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
